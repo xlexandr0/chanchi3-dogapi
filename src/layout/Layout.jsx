@@ -1,7 +1,15 @@
-const Layout = () => {
-    return(
-        <a href="javascript:void(0);" class="GetDog">Mira un perro nuevo!</a>
-    )
-}
+import { Outlet } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
-export default Layout;
+export default function Layout() {
+  return (
+    <>
+      <Header />
+      <main className="container my-4">
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
+}
